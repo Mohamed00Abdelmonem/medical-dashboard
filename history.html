@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Dashboard UI - History</title>
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter font family -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+
+    <div class="flex h-screen bg-gray-200">
+        <!-- Sidebar -->
+        <div class="w-64 bg-white shadow-md hidden md:block">
+            <div class="p-6">
+                <h1 class="text-2xl font-extrabold app-dark-text">Dashboard</h1>
+            </div>
+            <nav class="text-sm font-medium text-gray-600">
+                <a href="index.html" class="flex items-center px-6 py-3 hover:bg-gray-100">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    <span class="ml-3">Home</span>
+                </a>
+                <a href="doctors.html" class="flex items-center px-6 py-3 hover:bg-gray-100">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 18l-2 2-3-3 2-2 3 3z"></path><path d="M15 11l-3 3 2 2 3-3-2-2z"></path><path d="M16 4l-4 4 2 2 4-4-2-2z"></path><path d="M21 16l-4 4-2-2 4-4 2 2z"></path></svg>
+                    <span class="ml-3">Doctors</span>
+                </a>
+                <a href="#" class="flex items-center px-6 py-3 text-gray-800 bg-gray-100">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    <span class="ml-3">History</span>
+                </a>
+                <a href="reports.html" class="flex items-center px-6 py-3 hover:bg-gray-100">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2a4 4 0 0 0-4-4H3V7a4 4 0 0 1 4-4h4l2 2h4a2 2 0 0 1 2 2v2m-6 4h6m-6 4h6m-6 4h6"></path></svg>
+                    <span class="ml-3">Reports</span>
+                </a>
+                <a href="profile.html" class="flex items-center px-6 py-3 hover:bg-gray-100">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    <span class="ml-3">Profile</span>
+                </a>
+            </nav>
+        </div>
+
+        <!-- Main content -->
+        <div class="flex-1 flex flex-col overflow-hidden">
+            <!-- Top bar -->
+            <div class="bg-white shadow-md md:hidden">
+                <div class="flex justify-between items-center px-6 py-4">
+                    <h1 class="text-2xl font-extrabold app-dark-text">History</h1>
+                    <div class="flex items-center space-x-3">
+                        <!-- Notification/Bell Icon (Placeholder) -->
+                        <div class="p-2 rounded-full border border-gray-200 cursor-pointer hover:bg-gray-50 transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-500"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                        </div>
+                        <!-- Avatar with PRO badge -->
+                        <div class="relative w-10 h-10">
+                            <!-- Placeholder Avatar Image -->
+                            <img src="https://placehold.co/100x100/A0A0A0/ffffff?text=P" alt="Avatar" class="w-full h-full object-cover rounded-full border-2 border-white shadow-md">
+                            <span class="absolute top-0 right-0 transform translate-x-1 -translate-y-1 bg-yellow-400 text-white text-xs font-bold px-1 rounded-full border-2 border-white">PRO</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Scrollable Content -->
+            <div class="flex-grow overflow-y-auto px-6 pt-2 pb-20">
+                
+                <!-- Header Section -->
+                <header class="flex justify-between items-start mb-6">
+                    <div>
+                        <h1 class="text-2xl font-extrabold app-dark-text">Appointment History</h1>
+                    </div>
+                </header>
+
+                <!-- Appointment List -->
+                <section class="mb-4">
+                    <div class="flex flex-col space-y-4">
+                        
+                        <!-- Appointment Card 1 -->
+                        <div class="app-light-bg p-4 rounded-2xl shadow-md border border-gray-100 hover:shadow-lg transition duration-200 cursor-pointer">
+                            <div class="flex items-center space-x-4">
+                                <!-- Doctor Avatar -->
+                                <img src="https://i.pravatar.cc/60?u=drjennifer" alt="Dr. Smith" class="w-12 h-12 rounded-full border-2 border-white object-cover">
+                                <div>
+                                    <p class="font-bold text-lg">Dr. Jennifer Smith</p>
+                                    <p class="text-sm opacity-80">Orthopedic Consultation (Foot & Ankle)</p>
+                                </div>
+                            </div>
+                            <div class="border-t border-gray-200 mt-4 pt-3 flex flex-col sm:flex-row justify-between items-start sm:items-center text-sm font-medium space-y-2 sm:space-y-0">
+                                <div class="flex flex-wrap items-center space-x-4">
+                                    <!-- Calendar Icon (Placeholder) -->
+                                    <div class="flex items-center space-x-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-80"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                        <span>Wed, 7 Sep 2024</span>
+                                    </div>
+                                    <!-- Time Icon (Placeholder) -->
+                                    <div class="flex items-center space-x-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-80"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                        <span>10:30 - 11:30 AM</span>
+                                    </div>
+                                </div>
+                                <a href="appointment-detail.html" class="bg-white text-gray-600 px-4 py-1.5 rounded-xl font-bold text-xs shadow-md hover:bg-gray-100 transition">
+                                    View Details
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Appointment Card 2 -->
+                        <div class="app-light-bg p-4 rounded-2xl shadow-md border border-gray-100 hover:shadow-lg transition duration-200 cursor-pointer">
+                            <div class="flex items-center space-x-4">
+                                <!-- Doctor Avatar -->
+                                <img src="https://i.pravatar.cc/60?u=drwarner" alt="Dr. Warner" class="w-12 h-12 rounded-full border-2 border-white object-cover">
+                                <div>
+                                    <p class="font-bold text-lg">Dr. Warner</p>
+                                    <p class="text-sm opacity-80">Neurology Consultation</p>
+                                </div>
+                            </div>
+                            <div class="border-t border-gray-200 mt-4 pt-3 flex flex-col sm:flex-row justify-between items-start sm:items-center text-sm font-medium space-y-2 sm:space-y-0">
+                                <div class="flex flex-wrap items-center space-x-4">
+                                    <!-- Calendar Icon (Placeholder) -->
+                                    <div class="flex items-center space-x-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-80"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                        <span>Mon, 5 Sep 2024</span>
+                                    </div>
+                                    <!-- Time Icon (Placeholder) -->
+                                    <div class="flex items-center space-x-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-80"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                        <span>2:00 - 2:30 PM</span>
+                                    </div>
+                                </div>
+                                <a href="appointment-detail.html" class="bg-white text-gray-600 px-4 py-1.5 rounded-xl font-bold text-xs shadow-md hover:bg-gray-100 transition">
+                                    View Details
+                                </a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </section>
+            </div>
+
+            <!-- Bottom Navigation Bar (Fixed for Mobile) -->
+            <nav class="md:hidden fixed bottom-0 left-0 right-0 h-16 bg-white border-t border-gray-100 shadow-2xl flex justify-around items-center rounded-t-2xl px-4">
+                
+                <a href="index.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-purple-400 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    <span class="text-xs font-semibold mt-0.5">Home</span>
+                </a>
+
+                <a href="doctors.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-purple-400 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M11 18l-2 2-3-3 2-2 3 3z"></path><path d="M15 11l-3 3 2 2 3-3-2-2z"></path><path d="M16 4l-4 4 2 2 4-4-2-2z"></path><path d="M21 16l-4 4-2-2 4-4 2 2z"></path></svg>
+                    <span class="text-xs font-medium mt-0.5">Doctors</span>
+                </a>
+                
+                <a href="#" class="flex flex-col items-center justify-center app-text-primary hover:text-purple-700 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 fill-current"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    <span class="text-xs font-medium mt-0.5">History</span>
+                </a>
+
+                <a href="profile.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-purple-400 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    <span class="text-xs font-medium mt-0.5">Profile</span>
+                </a>
+            </nav>
+        </div>
+    </div>
+
+</body>
+</html>
