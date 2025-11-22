@@ -2,63 +2,78 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #f3f4f6;
 }
 
 .app-primary {
-    background-color: #6a5acd;
+    background-color: #8A2BE2; /* BlueViolet */
 }
 
 .app-text-primary {
-    color: #6a5acd;
+    color: #8A2BE2; /* BlueViolet */
 }
 
 .app-light-bg {
-    background-color: #f7f6fd;
+    background-color: #fff;
 }
 
 .app-dark-text {
-    color: #1f2937;
+    color: #333;
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
-.no-scrollbar::-webkit-scrollbar {
-    display: none;
+/* Custom styles for Bootstrap components */
+.form-control:focus {
+    border-color: #8A2BE2;
+    box-shadow: 0 0 0 0.125rem rgba(138, 43, 226, 0.25); /* Smaller shadow */
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
-.no-scrollbar {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+.btn-primary {
+    background-color: #8A2BE2;
+    border-color: #8A2BE2;
+    border-radius: 0.25rem; /* Smaller border-radius */
 }
 
-/* Sidebar */
+.btn-primary:hover {
+    background-color: #6A1B9A; /* Darker shade of BlueViolet */
+    border-color: #6A1B9A;
+}
+
+.btn-outline-secondary {
+    color: #6c757d;
+    border-color: #6c757d;
+    border-radius: 0.25rem; /* Smaller border-radius */
+}
+
+.btn-outline-secondary:hover {
+    background-color: #6c757d;
+    color: #fff;
+}
+
 .sidebar {
-    background-color: #ffffff;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    transition: all 0.3s ease-in-out;
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    overflow: hidden;
 }
 
 .sidebar-link {
-    color: #4b5563;
-    font-weight: 600;
+    color: #6c757d;
+    font-weight: 500;
     transition: all 0.2s ease-in-out;
-    border-radius: 0.5rem;
-    margin: 0.5rem;
-    padding: 0.75rem 1.5rem;
+    border-radius: 0.25rem; /* Smaller border-radius */
+    margin: 0.25rem; /* Smaller margin */
+    padding: 0.5rem 1rem; /* Smaller padding */
     display: flex;
     align-items: center;
 }
 
 .sidebar-link:hover {
-    color: #3b82f6;
-    background-color: #eff6ff;
+    color: #8A2BE2;
+    background-color: #e9ecef;
 }
 
 .sidebar-link.active {
-    color: #3b82f6;
-    background-color: #eff6ff;
+    color: #8A2BE2;
+    background-color: #e9ecef;
     position: relative;
 }
 
@@ -68,14 +83,26 @@ body {
     left: 0;
     top: 0;
     height: 100%;
-    width: 4px;
-    background-color: #3b82f6;
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
+    width: 2px; /* Smaller width */
+    background-color: #8A2BE2;
+    border-top-right-radius: 2px; /* Smaller border-radius */
+    border-bottom-right-radius: 2px; /* Smaller border-radius */
 }
 
-/* Animations */
-@keyframes fadeInUp {
+/* Sidebar toggle styles */
+@media (min-width: 768px) {
+    body.sidebar-hidden .sidebar {
+        margin-left: -250px; /* Adjust to your sidebar width */
+    }
+    body.sidebar-hidden .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+
+/* Custom animation */
+@keyframes fade-in-up {
     from {
         opacity: 0;
         transform: translateY(20px);
@@ -87,5 +114,46 @@ body {
 }
 
 .animate-fade-in-up {
-    animation: fadeInUp 0.5s ease-out forwards;
+    animation: fade-in-up 0.5s ease-out forwards;
+}
+
+.object-fit-cover {
+    object-fit: cover;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.text-decoration-underline-hover:hover {
+    text-decoration: underline !important;
+}
+
+/* Custom classes for ads and upcoming appointment */
+.transform-hover-scale-101 {
+    transition: transform 0.3s ease-in-out;
+}
+
+.transform-hover-scale-101:hover {
+    transform: scale(1.01);
+}
+
+.transition-all {
+    transition: all 0.3s ease-in-out;
+}
+
+.ad-card-primary {
+    background-color: #6A1B9A; /* Darker shade of BlueViolet */
+}
+
+.ad-card-secondary {
+    background-color: #28a745; /* Bootstrap success green */
+}
+
+.ad-icon-wrapper {
+    /* Styles for the icon background in ad cards */
+}
+
+.text-purple-600 {
+    color: #9333ea; /* A shade of purple, similar to app-text-primary */
 }
